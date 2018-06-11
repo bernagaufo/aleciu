@@ -10,6 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        document.addEventListener("backbutton", onBackKeyDown, false);
     },
 
     // Update DOM on a Received Event
@@ -33,9 +34,6 @@ function exitFromApp(){
         window.close();
     }
 };
-function onDeviceReady(){
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
 function onBackKeyDown(){
     alert('Atrás');
     return false;
