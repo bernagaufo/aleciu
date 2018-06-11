@@ -16,5 +16,13 @@
     "variables": {
       "API_KEY_FOR_ANDROID": "AIzaSyDL3zukFrxlSjlxq9tle2PS_MlanvtFtY4"
     }
+  },
+  "cordova-plugin-geolocation": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-geolocation@4.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
