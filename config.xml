@@ -32,7 +32,5 @@
     <engine name="android" spec="~7.0.0" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.3.6">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDL3zukFrxlSjlxq9tle2PS_MlanvtFtY4" />
-        <variable name="PLAY_SERVICES_VERSION" value="15.0.1" />
-        <variable name="ANDROID_SUPPORT_V4_VERSION" value="26.1.0" />
     </plugin>
 </widget>
