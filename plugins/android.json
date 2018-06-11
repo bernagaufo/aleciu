@@ -18,6 +18,10 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.alertasciudadanas.mx"
+    },
+    "cordova-android-play-services-gradle-release": {
+      "PLAY_SERVICES_VERSION": "15.+",
+      "PACKAGE_NAME": "com.alertasciudadanas.mx"
     }
   },
   "dependent_plugins": {}

@@ -1,0 +1,39 @@
+{
+  "_from": "cordova-android-play-services-gradle-release",
+  "_id": "cordova-android-play-services-gradle-release@1.4.2",
+  "_inBundle": false,
+  "_integrity": "sha512-GUDI5suXsAoR0fjxn2VKJgKiE6pOXzq3kc09OB9+yOrKRCj99g32RxtQDx3xoodjtzDXaR62ynj0+TVAzebvWw==",
+  "_location": "/cordova-android-play-services-gradle-release",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-android-play-services-gradle-release",
+    "name": "cordova-android-play-services-gradle-release",
+    "escapedName": "cordova-android-play-services-gradle-release",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-android-play-services-gradle-release/-/cordova-android-play-services-gradle-release-1.4.2.tgz",
+  "_shasum": "6d409cec81a5343b2850ad47ff7c58bb0c154194",
+  "_spec": "cordova-android-play-services-gradle-release",
+  "_where": "C:\\Users\\Villber\\Documents\\App_Alertas\\alertasciudadanas",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "xml2js": "~0.4.19"
+  },
+  "deprecated": false,
+  "description": "Cordova/Phonegap plugin to align various versions of the Play Services library specified by other plugins to a specific version",
+  "devDependencies": {},
+  "license": "MIT",
+  "name": "cordova-android-play-services-gradle-release",
+  "version": "1.4.2"
+}
