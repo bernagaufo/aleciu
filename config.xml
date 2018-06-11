@@ -18,6 +18,12 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <icon src="res/icon/android/ldpi.png" platform="android" qualifier="ldpi" />
+        <icon src="res/icon/android/mdpi.png" platform="android" qualifier="mdpi" />
+        <icon src="res/icon/android/hdpi.png" platform="android" qualifier="hdpi" />
+        <icon src="res/icon/android/xhdpi.png" platform="android" qualifier="xhdpi" />
+        <icon src="res/icon/android/xxhdpi.png" platform="android" qualifier="xxhdpi" />
+        <icon src="res/icon/android/xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
