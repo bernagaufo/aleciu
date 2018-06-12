@@ -28,8 +28,8 @@ var config = {
                       '<span class="card-title">'+childs.titulo+'</span>'+
                       '<a href="'+childs.enlace+'" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>'+
                     '</div>'+
-                    '<div class="card-content">'+
-                    '<div>'+childs.descripcion+'</div>'+
+                    '<div class="card-content ">'+
+                    '<div class="black-text">'+childs.descripcion+'</div>'+
                     '</div>'+
                   '</div>'+
               '</div>';
@@ -48,13 +48,13 @@ var config = {
                 var marker = new google.maps.Marker({
                   position: {lat: childs.latitud, lng: childs.longitud},
                   map: map,
-                  icon: iconBase + iconoP +'.png',
+                  icon: iconBase + iconoP +'.gif',
                   title: tituloA,
                   animation: google.maps.Animation.DROP
                 });
                 var infowindow = new google.maps.InfoWindow({
                   content: contentString,
-                  maxWidth: 230
+                  maxWidth: 200
                 });
                 marker.addListener('click', function() {
                 infowindow.open(map, marker);
@@ -64,7 +64,8 @@ var config = {
 
             var map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 20.6737777, lng: -103.4054536},
-              zoom: 12
+              zoom: 12,
+              fullscreenControl: false
             });
             var geocoder = new google.maps.Geocoder();
             var trafficLayer = new google.maps.TrafficLayer();
@@ -114,9 +115,10 @@ var config = {
               handleLocationError(false, infoWindow, map.getCenter());
             };          
 };
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-          infoWindow.setPosition(pos);
-          infoWindow.setContent(browserHasGeolocation ?
-            'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
-        };
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
+};
+
