@@ -29,8 +29,10 @@ var config = {
                       '<a href="'+childs.enlace+'" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>'+
                     '</div>'+
                     '<div class="card-content ">'+
-                    '<div class="black-text">'+childs.descripcion+'</div>'+
+                    '<div class="blue-text"><strong>Fecha: '+childs.timestamp+'</strong></div><br />'+
+                    '<div class="black-text">'+childs.descripcion+'</div><br />'+
                     '</div>'+
+                    '<a href="'+childs.enlace+'" target="_blank" class="red-text"><strong class="center-align">Seguir la nota</strong></a>'+
                   '</div>'+
               '</div>';
                 
@@ -54,7 +56,7 @@ var config = {
                 });
                 var infowindow = new google.maps.InfoWindow({
                   content: contentString,
-                  maxWidth: 200
+                  maxWidth: 230
                 });
                 marker.addListener('click', function() {
                 infowindow.open(map, marker);
