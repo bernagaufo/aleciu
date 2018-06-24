@@ -289,3 +289,11 @@ footer.page-footer {
 .card-content iframe{
   width: 100%;
 }
+nav .brand-logo{
+  font-size: inherit;
+  padding: 10px;
+}
+#iconMenu{width: 28px;
+    height: 28px;
+    }
+svg{fill: #dc0000; vertical-align: middle;}

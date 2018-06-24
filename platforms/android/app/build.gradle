@@ -263,6 +263,8 @@ dependencies {
     compile "com.google.android.gms:play-services-maps:$PLAY_SERVICES_VERSION"
     compile "com.google.android.gms:play-services-location:$PLAY_SERVICES_VERSION"
     compile "com.android.support:support-core-utils:$ANDROID_SUPPORT_V4_VERSION"
+    compile "com.google.android.gms:play-services-base:11.0.4"
+    compile "com.google.android.gms:play-services-ads:11.0.4"
     // SUB-PROJECT DEPENDENCIES END
 }
 

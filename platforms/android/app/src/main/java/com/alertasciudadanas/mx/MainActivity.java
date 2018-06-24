@@ -21,6 +21,7 @@ package com.alertasciudadanas.mx;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends CordovaActivity
 {
@@ -34,7 +35,7 @@ public class MainActivity extends CordovaActivity
         if (extras != null && extras.getBoolean("cdvStartInBackground", false)) {
             moveTaskToBack(true);
         }
-
+        MobileAds.initialize(this, "ca-app-pub-0211823635398974~6027272401");
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
     }

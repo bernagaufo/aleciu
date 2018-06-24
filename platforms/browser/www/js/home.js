@@ -10,10 +10,12 @@ var config = {
   firebase.initializeApp(config);
   // traer datos de firebase
   firebase.database.enableLogging(false);
+  var presenceRef = firebase.database().ref("disconnectmessage");
+  // Write a string when this client loses connection
+  presenceRef.onDisconnect().set("Te has quedado sin conexión!");
           // Find all dinosaurs whose names come before Pterodactyl lexicographically.
   var ref = firebase.database().ref("alerta");
   ref.orderByKey().endAt("titulo").on("child_added", function(snapshot) {
-  console.log(snapshot.key);
   });
           function initMap() {
             // Ciclo para poner marcas en el mapa, firebase
@@ -28,9 +30,11 @@ var config = {
                       '<span class="card-title">'+childs.titulo+'</span>'+
                       '<a href="'+childs.enlace+'" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>'+
                     '</div>'+
-                    '<div class="card-content">'+
-                    '<div>'+childs.descripcion+'</div>'+
+                    '<div class="card-content ">'+
+                    '<div class="blue-text"><strong>Fecha: '+childs.timestamp+'</strong></div><br />'+
+                    '<div class="black-text">'+childs.descripcion+'</div><br />'+
                     '</div>'+
+                    '<a href="'+childs.enlace+'" target="_blank" class="red-text"><strong class="center-align">Seguir la nota</strong></a>'+
                   '</div>'+
               '</div>';
                 
@@ -48,13 +52,13 @@ var config = {
                 var marker = new google.maps.Marker({
                   position: {lat: childs.latitud, lng: childs.longitud},
                   map: map,
-                  icon: iconBase + iconoP +'.png',
+                  icon: iconBase + iconoP +'.gif',
                   title: tituloA,
                   animation: google.maps.Animation.DROP
                 });
                 var infowindow = new google.maps.InfoWindow({
                   content: contentString,
-                  maxWidth: 195
+                  maxWidth: 230
                 });
                 marker.addListener('click', function() {
                 infowindow.open(map, marker);
@@ -64,7 +68,8 @@ var config = {
 
             var map = new google.maps.Map(document.getElementById('map'), {
               center: {lat: 20.6737777, lng: -103.4054536},
-              zoom: 12
+              zoom: 12,
+              fullscreenControl: false
             });
             var geocoder = new google.maps.Geocoder();
             var trafficLayer = new google.maps.TrafficLayer();
@@ -80,6 +85,7 @@ var config = {
                   var marker = new google.maps.Marker({
                     map: resultsMap,
                     zoom: 15,
+                    draggable: true,
                     position: results[0].geometry.location
                   });
                 } else {
@@ -114,9 +120,9 @@ var config = {
               handleLocationError(false, infoWindow, map.getCenter());
             };          
 };
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-          infoWindow.setPosition(pos);
-          infoWindow.setContent(browserHasGeolocation ?
-            'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
-        };
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
+};

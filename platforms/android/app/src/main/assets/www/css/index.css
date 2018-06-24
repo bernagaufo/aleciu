@@ -218,7 +218,7 @@ footer.page-footer {
     background-color: #690084d1 !important;
   }
   .gmnoprint[title] img{opacity: 0 !important;}
-  .gmnoprint[title]:before {
+/*  .gmnoprint[title]:before {
     content: '';
     position: relative;
     display: block;
@@ -245,7 +245,7 @@ footer.page-footer {
     border-radius: 105px;
     box-shadow: 0 0 8px rgba(0,0,0,.3);
     animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-}
+}*/
 
 @keyframes pulse-ring {
   0% {
@@ -278,3 +278,22 @@ footer.page-footer {
 .gm-bundled-control-on-bottom{
   bottom: 150px !important;
 }
+.card-content .black-text{
+  text-transform: initial;
+  font-size: 14px;
+  font-family: Arial;
+}
+.card .card-content{
+  padding: 10px 0;
+}
+.card-content iframe{
+  width: 100%;
+}
+nav .brand-logo{
+  font-size: inherit;
+  padding: 10px;
+}
+#iconMenu{width: 28px;
+    height: 28px;
+    }
+svg{fill: #dc0000; vertical-align: middle;}

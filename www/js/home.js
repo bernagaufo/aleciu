@@ -10,10 +10,12 @@ var config = {
   firebase.initializeApp(config);
   // traer datos de firebase
   firebase.database.enableLogging(false);
+  var presenceRef = firebase.database().ref("disconnectmessage");
+  // Write a string when this client loses connection
+  presenceRef.onDisconnect().set("Te has quedado sin conexión!");
           // Find all dinosaurs whose names come before Pterodactyl lexicographically.
   var ref = firebase.database().ref("alerta");
   ref.orderByKey().endAt("titulo").on("child_added", function(snapshot) {
-  console.log(snapshot.key);
   });
           function initMap() {
             // Ciclo para poner marcas en el mapa, firebase
@@ -83,6 +85,7 @@ var config = {
                   var marker = new google.maps.Marker({
                     map: resultsMap,
                     zoom: 15,
+                    draggable: true,
                     position: results[0].geometry.location
                   });
                 } else {
@@ -123,4 +126,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
 };
-
