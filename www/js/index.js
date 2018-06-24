@@ -11,11 +11,6 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
         document.addEventListener("backbutton", onBackKeyDown, false);
-        document.addEventListener("offline", onOffline, false);
-        function onOffline() {
-            alert('Verifica tu conexión a internet.');
-        };
-        initAd();
     },
 
     // Update DOM on a Received Event
@@ -91,4 +86,5 @@ function showInterstitialFunc(){
     window.plugins.AdMob.createInterstitialView();  //get the interstitials ready to be shown and show when it's loaded.
     window.plugins.AdMob.requestInterstitialAd();
 }
+initAd();
 app.initialize();
