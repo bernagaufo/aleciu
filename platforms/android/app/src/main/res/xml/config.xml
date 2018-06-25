@@ -55,13 +55,11 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
-    <name>AlertasCiudadanas</name>
-    <description>
-        Los eventos en el momento que estan sucediendo
-    </description>
+    <name>Alertas Ciudadanas</name>
+    <description>Los eventos en el momento que estan sucediendo</description>
     <author email="alertasciudadanas@gmail.com" href="https://www.facebook.com/villbercreativo">
         Alertas Ciudadanas
-    </author>
+</author>
     <content src="index.html" />
     <access origin="*" />
     <access origin="*://*.googleapis.com/*" subdomains="true" />
