@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.alertasciudadanas.mx" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="CordovaGoogleMaps">
+        <param name="android-package" value="plugin.google.maps.CordovaGoogleMaps" />
+        <param name="onload" value="true" />
+        <param name="onreset" value="true" />
+    </feature>
+    <feature name="Map">
+        <param name="android-package" value="plugin.google.maps.PluginMap" />
+    </feature>
+    <feature name="Polyline">
+        <param name="android-package" value="plugin.google.maps.PluginPolyline" />
+    </feature>
+    <feature name="Polygon">
+        <param name="android-package" value="plugin.google.maps.PluginPolygon" />
+    </feature>
+    <feature name="Marker">
+        <param name="android-package" value="plugin.google.maps.PluginMarker" />
+    </feature>
+    <feature name="Circle">
+        <param name="android-package" value="plugin.google.maps.PluginCircle" />
+    </feature>
+    <feature name="TileOverlay">
+        <param name="android-package" value="plugin.google.maps.PluginTileOverlay" />
+    </feature>
+    <feature name="GroundOverlay">
+        <param name="android-package" value="plugin.google.maps.PluginGroundOverlay" />
+    </feature>
+    <feature name="KmlOverlay">
+        <param name="android-package" value="plugin.google.maps.PluginKmlOverlay" />
+    </feature>
+    <feature name="Geocoder">
+        <param name="android-package" value="plugin.google.maps.PluginGeocoder" />
+    </feature>
+    <feature name="LocationService">
+        <param name="android-package" value="plugin.google.maps.PluginLocationService" />
+    </feature>
+    <feature name="Environment">
+        <param name="android-package" value="plugin.google.maps.Environment" />
+    </feature>
+    <feature name="MarkerCluster">
+        <param name="android-package" value="plugin.google.maps.PluginMarkerCluster" />
+    </feature>
+    <feature name="StreetViewPanorama">
+        <param name="android-package" value="plugin.google.maps.PluginStreetViewPanorama" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Alertas Ciudadanas</name>
+    <description>
+        Los eventos en el momento que estan sucediendo
+    </description>
+    <author email="alertasciudadanas@gmail.com" href="https://www.facebook.com/villbercreativo">
+        Alertas Ciudadanas
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <access origin="*://*.googleapis.com/*" subdomains="true" />
+    <access origin="*://*.google.com/*" subdomains="true" />
+    <access origin="*://*.googleusercontent.com/*" subdomains="true" />
+    <access origin="*://*.gstatic.com/*" subdomains="true" />
+    <access origin="http://google.com" />
+    <access origin="https://google.com" />
+    <access origin="https://*.google.com" />
+    <access origin="https://*.doubleclick.net/*" />
+    <access launch-external="yes" origin="tel:*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" platform="android" src="res/icon/android/ldpi.png" />
+    <icon density="mdpi" platform="android" src="res/icon/android/mdpi.png" />
+    <icon density="hdpi" platform="android" src="res/icon/android/hdpi.png" />
+    <icon density="xhdpi" platform="android" src="res/icon/android/xhdpi.png" />
+    <icon density="xxhdpi" platform="android" src="res/icon/android/xxhdpi.png" />
+    <icon density="xxxhdpi" platform="android" src="res/icon/android/xxxhdpi.png" />
+    <splash density="-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="-mdpi" src="res/screen/android/screen-mdpi-portraiti.png" />
+    <splash density="-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="xwalkZOrderOnTop" value="true" />
+    <preference name="BackgroundColor" value="0" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="android-minSdkVersion" value="19" />
+</widget>
