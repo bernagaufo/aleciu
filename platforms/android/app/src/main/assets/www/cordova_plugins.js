@@ -241,7 +241,8 @@ module.exports.metadata =
   "cordova-plugin-googlemaps": "2.3.6",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-geolocation": "2.4.3",
-  "cordova-plugin-splashscreen": "5.0.2"
+  "cordova-plugin-splashscreen": "5.0.2",
+  "cordova-admob-sdk": "0.13.1"
 };
 // BOTTOM OF METADATA
 });
