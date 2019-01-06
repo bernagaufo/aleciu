@@ -81,7 +81,7 @@
           <input type="text" name="titulo" id="titulo" placeholder="Titulo">
           <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
           <input type="text" name="enlace" placeholder="Pon tu enlace a la noticia" id="enlace">
-          <input type="file" id="foto" name="foto">
+          <input type="text" id="foto" name="foto" placeholder="foto url">
           <input type="text" id="latitud" name="latitud" placeholder="latitud">
           <input type="text" id="longitud" name="longitud" placeholder="longitud">
           <input type="date" id="timestamp" name="timestamp" placeholder="Fecha">
@@ -301,11 +301,6 @@
 //     userId,
 //   });
 // };
-  var referencia = database.ref('testRef');
-  referencia.set({
-    campoTest: 'valor del test 3.0862 am',
-    ahora: new Date().getTime()
-  });
   function GuardarAlerta(){
     var titulo = document.getElementById('titulo').value;
     var descripcion = document.getElementById('descripcion').value;
@@ -316,30 +311,16 @@
     var timestamp = document.getElementById('timestamp').value;
     var tipo = document.getElementById('tipo').value;
     var autor = localStorage.email;
-    function writeUserData(activo, titulo, descripcion, enlace, foto, latitud, longitud, timestamp, tipo, autor) {
-      firebase.database().ref('alerta/').set({
-        activo: 1,
-        titulo: titulo,
-        descripcion: descripcion,
-        enlace: enlace,
-        foto: foto,
-        latitud: latitud,
-        longitud: longitud,
-        timestamp: timestamp,
-        tipo: tipo,
-        autor: email
-      });
-    };
-    var postsRef = ref.child("alerta");
-    var newPostRef = postsRef.push();
-    newPostRef.set({
+    var id = Date.now();
+    var referencia = database.ref('alerta/'+id);
+    referencia.set({
       activo: 1,
       titulo: titulo,
       descripcion: descripcion,
       enlace: enlace,
       foto: foto,
-      latitud: latitud,
-      longitud: longitud,
+      latitud: Number(latitud),
+      longitud: Number(longitud),
       timestamp: timestamp,
       tipo: tipo,
       autor: email

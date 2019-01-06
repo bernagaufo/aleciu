@@ -297,3 +297,26 @@ nav .brand-logo{
     height: 28px;
     }
 svg{fill: #dc0000; vertical-align: middle;}
+.card .card-image .btn-floating img{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 0 auto;
+  top: 10px;
+}
+/*card onsenui*/
+.card-image{position: relative;}
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    width: 100%;
+}
+.card .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 175px;
+}
+.gm-ui-hover-effect{background-color: red;}

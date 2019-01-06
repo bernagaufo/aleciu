@@ -92,6 +92,7 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-googlemaps/mx-tbxml-android.gradle"
+apply from: "../cordova-support-google-services/mx-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -265,6 +266,9 @@ dependencies {
     compile "com.android.support:support-core-utils:$ANDROID_SUPPORT_V4_VERSION"
     compile "com.google.android.gms:play-services-base:$PLAY_SERVICES_VERSION"
     compile "com.google.android.gms:play-services-ads:$PLAY_SERVICES_VERSION"
+    compile "com.google.firebase:firebase-messaging:17.0.+"
+    compile "com.android.support:support-compat:27.+"
+    compile "me.leolin:ShortcutBadger:1.1.17@aar"
     // SUB-PROJECT DEPENDENCIES END
 }
 

@@ -233,6 +233,42 @@ module.exports = [
     "clobbers": [
       "navigator.splashscreen"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase-messaging.FirebaseMessaging",
+    "file": "plugins/cordova-plugin-firebase-messaging/www/FirebaseMessaging.js",
+    "pluginId": "cordova-plugin-firebase-messaging",
+    "merges": [
+      "cordova.plugins.firebase.messaging"
+    ]
+  },
+  {
+    "id": "cordova-promise-polyfill.Promise",
+    "file": "plugins/cordova-promise-polyfill/www/Promise.js",
+    "pluginId": "cordova-promise-polyfill",
+    "runs": true
+  },
+  {
+    "id": "cordova-promise-polyfill.promise.min",
+    "file": "plugins/cordova-promise-polyfill/www/promise.min.js",
+    "pluginId": "cordova-promise-polyfill"
+  },
+  {
+    "id": "cordova-plugin-network-information.network",
+    "file": "plugins/cordova-plugin-network-information/www/network.js",
+    "pluginId": "cordova-plugin-network-information",
+    "clobbers": [
+      "navigator.connection",
+      "navigator.network.connection"
+    ]
+  },
+  {
+    "id": "cordova-plugin-network-information.Connection",
+    "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+    "pluginId": "cordova-plugin-network-information",
+    "clobbers": [
+      "Connection"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -242,7 +278,12 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-geolocation": "2.4.3",
   "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-admob-sdk": "0.13.1"
+  "cordova-admob-sdk": "0.13.1",
+  "cordova-support-android-plugin": "1.0.1",
+  "cordova-support-google-services": "1.2.0",
+  "cordova-plugin-firebase-messaging": "1.0.2",
+  "cordova-promise-polyfill": "0.0.2",
+  "cordova-plugin-network-information": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

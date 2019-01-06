@@ -17,24 +17,28 @@ var config = {
   var ref = firebase.database().ref("alerta");
   ref.orderByKey().endAt("titulo").on("child_added", function(snapshot) {
   });
+
           function initMap() {
             // Ciclo para poner marcas en el mapa, firebase
             var dbRef= firebase.database().ref('alerta');
                 dbRef.on('value', function(snapshot) {
                 snapshot.forEach(function(child) {
                 var childs=child.val();
+
+                // var mydate = new Date(childs.timestamp);
+                // var str = mydate.toString("dd/MM/YY");
+
                 var contentString = '<div class="row">'+
                   '<div class="card">'+
                     '<div class="card-image">'+
                       '<img width="auto" height="200" src="'+childs.foto+'">'+
                       '<span class="card-title">'+childs.titulo+'</span>'+
-                      '<a href="'+childs.enlace+'" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>'+
+                      '<a href="'+childs.enlace+'" target="_blank" class="btn-floating halfway-fab waves-effect waves-light red"><img width="30" height="30" src="img/plus.png"></a>'+
                     '</div>'+
                     '<div class="card-content ">'+
                     '<div class="blue-text"><strong>Fecha: '+childs.timestamp+'</strong></div><br />'+
                     '<div class="black-text">'+childs.descripcion+'</div><br />'+
                     '</div>'+
-                    '<a href="'+childs.enlace+'" target="_blank" class="red-text"><strong class="center-align">Seguir la nota</strong></a>'+
                   '</div>'+
               '</div>';
                 
@@ -99,10 +103,11 @@ var config = {
             if (navigator.geolocation) {
               navigator.geolocation.getCurrentPosition(function(position) {
                 var pos = {
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude
+                  lat: parseFloat(position.coords.latitude),
+                  lng: parseFloat(position.coords.longitude)
 
                 };
+                console.log(pos);
                 var marker = new google.maps.Marker({
                   icon: iconBase + 'mipos.png',
                   position: pos,

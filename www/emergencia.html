@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/materialize.css" media="screen,projection">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="onsen/onsenui.min.css">
+        <link rel="stylesheet" href="onsen/onsen-css-components.min.css">
+        <script src="onsen/onsenui.min.js"></script>
+        <title>App Alertas</title>
+    </head>
+    <body class="emergencia">
+        <div style="display: none;" class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <nav role="navigation" class="white">
+            <div class="nav-wrapper container">
+              <a id="logo-container" href="index.html" class="brand-logo"><img src="img/logo_alertaciudadana.png" height="36" width="auto"></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Mapa en vivo</a></li>
+                <li><a href="mapa_delictivo.html">Mapas delictivos</a></li>
+                <li><a href="respuesta_policia.html">Indice de respuesta</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="publicidad.html">Publicidad</a></li>
+                <li><a href="https://www.facebook.com/alertasciudadanas" target="_blank"><i class="material-icons">facebook</i> Facebook</a></li>
+              </ul>
+              <ul id="nav-mobile" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="img/background.png">
+                  </div>
+                  <a href="index.html"><img class="circle" src="img/icono_alertas.png"></a>
+                  <a href="index.html"><span class="white-text name">Alertas Ciudadanas</span></a>
+                </div></li>
+                <li><a href="index.html"><i class="fas fa-home"></i>Mapa en vivo</a></li>
+                <li><a href="zonas_seguras.html"><i class="fas fa-shield-alt"></i>Zonas seguras</a></li>
+                <li><a href="mapa_delictivo.html"><i class="fas fa-skull"></i>Zonas de peligro</a></li>
+                <li><a href="mapa_general.html"><i class="fas fa-map-marked-alt"></i> Mapa general</a></li>
+                <li><a href="quienes_somos.html"><i class="fas fa-users"></i>Quiénes somos</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
+                <li><a href="emergencia.html"><i class="fas fa-ambulance"></i> Telefonos de emergencia</a></li>
+                <li><a class="subheader">S&iacute;guenos</a></li>
+                <li><a href="https://www.facebook.com/alertasciudadanas" target="_blank"><i class="fab fa-facebook indigo-text text-darken-4"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/alertasjalisco" target="_blank"><i class="fab fa-twitter-square blue-text text-darken-1"></i> Twitter</a></li>
+                <li><a href="#" onclick="exitFromApp();"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                <li><a href="#"><p id="version"></p></a></li>
+              </ul>
+              <a href="#" data-target="nav-mobile"  class="sidenav-trigger"><svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></a>
+
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col center-align">
+              <h2 class="purple-text text-darken-4">Contactos de emergencia</h2>
+              <p>Desde aquí puedes llamar a los cuerpos de emergencia de tu ciudad.</p>
+            </div>
+            <div class="col s12 center-align">
+              <img src="img/911-portada.jpg" alt=""><br>
+              <a href="tel:911" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar al 911</a>
+            </div>
+          </div>
+          <div class="col s12">
+            
+            <ul class="collapsible">
+              <li class="active">
+                <div class="collapsible-header"><i class="fas fa-angle-down"></i>Guadalajara</div>
+                <div class="collapsible-body">
+                  <p>Policia reactiva</p>
+                  <div class="row">
+                    <div class="col s6"><img src="img/policia_gdl.png" alt=""></div>
+                    <div class="col s6"><a href="tel:12016070" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar</a></div>
+                  </div>
+                  <div class="col s12"> 
+                    <p>Llamar en horario de oficina: L-V 9-18PM.</p>
+                    <p>En fines de semana no hay operadores. Patrullaje mínimo.</p>
+                    <b>Nota: Pida su numero de reporte y asegurece de llamar cada 15min. Ya que suelen no llegan y decir que si fueron.</b></div>
+                  <div class="col s12">
+                    <input type="range" name="points" min="0" value="30" max="100" disabled>
+                    <span class="deep-orange-text">Percepción sobre indice de respuesta: 30%</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="fas fa-angle-down"></i>Zapopan</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s6"><img src="img/policia_zapopan.jpg" width="auto" height="100" alt=""></div>
+                    <div class="col s6 boton_t">
+                      <div class="valign-wrapper">
+                      <a href="tel:38363600" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar</a>
+                    </div> 
+                  </div>
+                  </div>
+                  <div class="col s12"> 
+                    <p>Llamar en horario de oficina: L-V 9-20PM.</p>
+                    <p>En fines de semana patrullaje mínimo.</p>
+                  </div>
+                  <div class="col s12">
+                    <input type="range" name="points" min="0" value="48" max="100" disabled>
+                    <span class="deep-orange-text">Percepción sobre indice de respuesta: 48%</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="fas fa-angle-down"></i>Tlaquepaque</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s6"><img src="img/policia_tlaquepaque.jpg" width="auto" height="100" alt=""></div>
+                    <div class="col s6 boton_t">
+                      <div class="valign-wrapper">
+                      <a href="tel:30503050" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar</a>
+                    </div> 
+                  </div>
+                  </div>
+                  <div class="col s12"> 
+                    <p>Llamar en horario de oficina: L-V 9-20PM.</p>
+                    <p>En fines de semana patrullaje mínimo.</p>
+                  </div>
+                  <div class="col s12">
+                    <input type="range" name="points" min="0" value="34" max="100" disabled>
+                    <span class="deep-orange-text">Percepción sobre indice de respuesta: 34%</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="fas fa-angle-down"></i>Tlajomulco</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s6"><img src="img/policia_zapopan.jpg" width="auto" height="100" alt=""></div>
+                    <div class="col s6 boton_t">
+                      <div class="valign-wrapper">
+                      <a href="tel:32834545" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar</a>
+                    </div> 
+                  </div>
+                  </div>
+                  <div class="col s12"> 
+                    <p>Llamar en horario de oficina: L-V 9-20PM.</p>
+                    <p>En fines de semana patrullaje mínimo.</p>
+                  </div>
+                  <div class="col s12">
+                    <input type="range" name="points" min="0" value="27" max="100" disabled>
+                    <span class="deep-orange-text">Percepción sobre indice de respuesta: 27%</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="fas fa-angle-down"></i>Tonalá</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s6"><img src="img/policia_tonala.jpg" width="auto" height="100" alt=""></div>
+                    <div class="col s6 boton_t">
+                      <div class="valign-wrapper">
+                      <a href="tel:35866101" class="waves-effect waves-light btn red darken-4"><i class="fas fa-phone"></i> Llamar</a>
+                    </div> 
+                  </div>
+                  </div>
+                  <div class="col s12"> 
+                    <p>Llamar en horario de oficina: L-V 9-20PM.</p>
+                    <p>En fines de semana patrullaje mínimo.</p>
+                  </div>
+                  <div class="col s12">
+                    <input type="range" name="points" min="0" value="42" max="100" disabled>
+                    <span class="deep-orange-text">Percepción sobre indice de respuesta: 42%</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+           
+        </div>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script src="js/firebase.js"></script> -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/init.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/home.js"></script> -->
+        <script>
+          $(document).ready(function(){
+            $('.collapsible').collapsible();
+          });
+        var admobid = {
+            banner: 'ca-app-pub-0211823635398974/8309002577',
+            interstitial: 'ca-app-pub-0211823635398974/7783943294'
+        };
+        admob.banner.config({
+                id: admobid.banner,
+                isTesting: false,
+                autoShow: true,
+                size: FLUID,
+                bannerAtTop: false,
+            });
+        admob.banner.prepare();
+        admob.banner.show();
+        </script>
+    </body>
+</html>

@@ -44,7 +44,29 @@ body {
     text-transform:uppercase;
     width:100%;
 }
-
+@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;
+src:url(webfonts/fa-regular-400.eot);
+src:url(webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+url(webfonts/fa-regular-400.woff2) format("woff2"),
+url(webfonts/fa-regular-400.woff) format("woff"),
+url(webfonts/fa-regular-400.ttf) format("truetype"),
+url(webfonts/fa-regular-400.svg#fontawesome) format("svg")}
+.detalle .title{font-size: 17px; font-weight: bolder; color: #bf0000; padding: 10px 0;}
+.detalle .subtitulo{text-transform: initial; font-size: 16px; text-align: justify;}
+.detalle .fecha{font-size: 12px; color: blue; padding: 5px 0;}
+.titulo{color: red; padding: 10px 0}
+.list-item__title{font-size: 14px; line-height: 17px;
+    font-weight: 700; color: #333}
+.list-item__subtitle{font-size: 9px; text-transform: capitalize; color: #666}
+.emergencia .btn .fas{color: #fff}
+.far{font-family:"Font Awesome 5 Free";font-weight:400}
+.mapa_delictivo i.fas, .emergencia i.fas, .contacto i.fas, .detalle i.fas, .home i.fas, .quienes_somos i.fas{color: #c50000}
+.emergencia, .detalle{overflow: unset;}
+.emergencia .container{background: #fff;}
+.emergencia .collapsible-header{background: #d4d4d4}
+.boton_t{height: 100px; display: flex;}
+.sidenav li > a{padding: 0 20px; font-weight: bold}
+.sidenav li > a > i{margin: 0 14px 0 0;}
 /* Portrait layout (default) */
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
@@ -297,3 +319,38 @@ nav .brand-logo{
     height: 28px;
     }
 svg{fill: #dc0000; vertical-align: middle;}
+.card .card-image .btn-floating img{
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 0 auto;
+  top: 10px;
+}
+.titulo_menu{
+  font-size: 17px;
+  color: #bf0000;
+}
+/*card onsenui*/
+.card-image{position: relative;}
+.card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    width: 100%;
+}
+.card .card-image .card-title {
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 175px;
+}
+.gm-ui-hover-effect{background-color: red;}
+.info{
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+  font-size: 20px;
+  background:#fff;
+  z-index: 99;
+}

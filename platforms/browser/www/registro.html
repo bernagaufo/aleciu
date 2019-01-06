@@ -54,8 +54,19 @@
      * Handles the sign up button press.
      */
     function handleSignUp() {
+      var nombre = document.getElementById('nombre').value;
+      var telefono = document.getElementById('telefono').value;
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
+      // var database = firebase.database();
+      // var referencia = database.ref('usuarios');
+      //   referencia.set({
+      //     nombre: nombre,
+      //     celular: telefono,
+      //     email: email,
+      //     password: password,
+      //     fecha: new Date().getTime()
+      //   });
       if (email.length < 4) {
         alert('Por favor ponga un correo.');
         return;
@@ -70,6 +81,7 @@
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+
         // [START_EXCLUDE]
         if (errorCode == 'auth/weak-password') {
           alert('Contraseña no segura');
@@ -142,7 +154,7 @@
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Accediste ' +email;
+          document.getElementById('quickstart-sign-in-status').textContent = 'Accediste como: ' +email;
           document.getElementById('quickstart-sign-in').textContent = 'Desconectarse';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
@@ -215,6 +227,8 @@
       <div class="row">
         <div class="input-field col s12">
           <p>Recuerda que al registrarte y usar la app, aceptas las <a href="condiciones_servicio.html">Condiciones del servicio.</a></p>
+          <!-- <input class="mdl-textfield__input" type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+          <input class="mdl-textfield__input" type="tel" id="telefono" maxlength="10" name="telefono" placeholder="Celular: 10 digitos" /> -->
           <input class="mdl-textfield__input" type="text" id="email" name="email" placeholder="Email"/>
           <input class="mdl-textfield__input" type="password" id="password" name="password" placeholder="Password"/>
           
@@ -224,11 +238,11 @@
           </div>
           <br/>
           <p>&nbsp;</p>
-          <button disabled class="waves-effect waves-light btn red darken-4" id="quickstart-sign-in" name="signin">Acceder</button>
+          <button  class="waves-effect waves-light btn red darken-4" id="quickstart-sign-in" name="signin">Acceder</button>
           &nbsp;&nbsp;&nbsp;
-          <button disabled class="waves-effect waves-light btn indigo darken-4" id="quickstart-sign-up" name="signup">Registrarse</button>
+          <button class="waves-effect waves-light btn indigo darken-4" id="quickstart-sign-up" name="signup">Registrarse</button>
           <p>&nbsp;</p>
-          <button class="waves-effect waves-light btn orange accent-4" disabled id="quickstart-verify-email" name="verify-email">Enviar verificación de email</button>
+          <button style="display: none" class="waves-effect waves-light btn orange accent-4" disabled id="quickstart-verify-email" name="verify-email">Enviar verificación de email</button>
           <p>&nbsp;</p>
           <button class="waves-effect waves-light btn deep-orange accent-4" id="quickstart-password-reset" name="verify-email">Resetear la contraseña.</button>
           <p>&nbsp;</p>
