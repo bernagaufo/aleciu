@@ -93,6 +93,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-googlemaps/mx-tbxml-android.gradle"
 apply from: "../cordova-support-google-services/mx-build.gradle"
+apply from: "../cordova-plugin-firebase/mx-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -269,6 +270,11 @@ dependencies {
     compile "com.google.firebase:firebase-messaging:17.0.+"
     compile "com.android.support:support-compat:27.+"
     compile "me.leolin:ShortcutBadger:1.1.17@aar"
+    compile "com.google.android.gms:play-services-tagmanager:+"
+    compile "com.google.firebase:firebase-core:+"
+    compile "com.google.firebase:firebase-messaging:+"
+    compile "com.google.firebase:firebase-config:+"
+    compile "com.google.firebase:firebase-perf:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

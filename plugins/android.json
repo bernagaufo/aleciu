@@ -33,6 +33,9 @@
     },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.alertasciudadanas.mx"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.alertasciudadanas.mx"
     }
   },
   "dependent_plugins": {
