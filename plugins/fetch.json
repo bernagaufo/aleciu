@@ -58,13 +58,10 @@
   "cordova-plugin-firebase-messaging": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase-messaging"
+      "id": "cordova-plugin-firebase-messaging@^1.0.2"
     },
     "is_top_level": true,
-    "variables": {
-      "FIREBASE_MESSAGING_VERSION": "17.0.+",
-      "ANDROID_SUPPORT_VERSION": "27.+"
-    }
+    "variables": {}
   },
   "cordova-support-android-plugin": {
     "source": {
