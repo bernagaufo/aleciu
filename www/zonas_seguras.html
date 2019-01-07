@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" href="css/materialize.css" media="screen,projection">
+        
+        <link rel="stylesheet" href="onsen/onsenui.min.css">
+        <link rel="stylesheet" href="onsen/onsen-css-components.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="onsen/onsenui.min.js"></script>
+        <title>App Alertas</title>
+    </head>
+    <body class="mapa_delictivo">
+        <div style="display: none;" class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <nav role="navigation" class="white">
+            <div class="nav-wrapper container">
+              <a id="logo-container" href="index.html" class="brand-logo"><img src="img/logo_alertaciudadana.png" height="36" width="auto"></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Mapa en vivo</a></li>
+                <li><a href="mapa_delictivo.html">Mapas delictivos</a></li>
+                <li><a href="respuesta_policia.html">Indice de respuesta</a></li>
+                <li><a href="quienes_somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="publicidad.html">Publicidad</a></li>
+                <li><a href="https://www.facebook.com/alertasciudadanas" target="_blank"><i class="material-icons">facebook</i> Facebook</a></li>
+              </ul>
+              <ul id="nav-mobile" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="img/background.png">
+                  </div>
+                  <a href="index.html"><img class="circle" src="img/icono_alertas.png"></a>
+                  <a href="index.html"><span class="white-text name">Alertas Ciudadanas</span></a>
+                </div></li>
+                <li><a href="index.html"><i class="fas fa-home"></i>Mapa en vivo</a></li>
+                <li><a href="zonas_seguras.html"><i class="fas fa-shield-alt"></i>Zonas seguras</a></li>
+                <li><a href="mapa_delictivo.html"><i class="fas fa-skull"></i>Zonas de peligro</a></li>
+                <li><a href="mapa_general.html"><i class="fas fa-map-marked-alt"></i> Mapa general</a></li>
+                <li><a href="quienes_somos.html"><i class="fas fa-users"></i>Quiénes somos</a></li>
+                <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
+                <li><a href="emergencia.html"><i class="fas fa-ambulance"></i> Telefonos de emergencia</a></li>
+                <li><a class="subheader">S&iacute;guenos</a></li>
+                <li><a href="https://www.facebook.com/alertasciudadanas" target="_blank"><i class="fab fa-facebook indigo-text text-darken-4"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/alertasjalisco" target="_blank"><i class="fab fa-twitter-square blue-text text-darken-1"></i> Twitter</a></li>
+                <li><a href="#" onclick="exitFromApp();"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                <li><a href="#"><p id="version"></p></a></li>
+              </ul>
+              <a href="#" data-target="nav-mobile"  class="sidenav-trigger"><svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg></a>
+
+            </div>
+        </nav>
+        <ons-button class="info" onclick="ons.notification.alert('Estas son las zonas mas seguras por presión social, el indice de respuesta es muy rapido. Posibles viviendas de politicos o personas de poder social.')"><i class="fas fa-question-circle"></i></ons-button>
+        <div id="map"></div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script src="js/firebase.js"></script> -->
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/init.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3zukFrxlSjlxq9tle2PS_MlanvtFtY4&callback=initMap"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- <script type="text/javascript" src="js/home.js"></script> -->
+        <script type="text/javascript" src="http://altascapacidades.com.mx/alertas/zonas_seguras.js"></script>
+        <script>
+        var admobid = {
+            banner: 'ca-app-pub-0211823635398974/8309002577',
+            interstitial: 'ca-app-pub-0211823635398974/7783943294'
+        };
+        admob.banner.config({
+                id: admobid.banner,
+                isTesting: false,
+                autoShow: true,
+                size: FLUID,
+                bannerAtTop: false,
+            });
+        // Create banner
+        admob.banner.prepare();
+        // Show the banner
+        admob.banner.show();
+        </script>
+    </body>
+</html>

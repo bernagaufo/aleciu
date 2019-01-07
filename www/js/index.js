@@ -52,5 +52,5 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 app.initialize();
 
-document.getElementById('version').innerHTML = 'Versión 1.7';
+document.getElementById('version').innerHTML = 'Versión 1.7.1';
 
