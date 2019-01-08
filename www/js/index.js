@@ -91,6 +91,7 @@ function showInterstitialFunc(){
 }
 
 app.initialize();
+showBannerFunc();
 
 document.getElementById('version').innerHTML = 'Versión 1.7';
 
