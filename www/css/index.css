@@ -64,7 +64,7 @@ url(webfonts/fa-regular-400.svg#fontawesome) format("svg")}
 .emergencia, .detalle{overflow: unset;}
 .emergencia .container{background: #fff;}
 .emergencia .collapsible-header{background: #d4d4d4}
-.detalle i.fas{color: #fff;}
+.detalle i.enlace, .detalle i.fa-chevron-left{color: #fff;}
 .home .button{
   background: #fff;
  position: absolute;
