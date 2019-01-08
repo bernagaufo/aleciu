@@ -64,7 +64,15 @@ url(webfonts/fa-regular-400.svg#fontawesome) format("svg")}
 .emergencia, .detalle{overflow: unset;}
 .emergencia .container{background: #fff;}
 .emergencia .collapsible-header{background: #d4d4d4}
-.boton_t{height: 100px; display: flex;}
+.detalle i.fas{color: #fff;}
+.home .button{
+  background: #fff;
+ position: absolute;
+    bottom: 68px;
+    right: 30px;
+    width: 50px;
+    height: 36px;
+}
 .sidenav li > a{padding: 0 20px; font-weight: bold}
 .sidenav li > a > i{margin: 0 14px 0 0;}
 /* Portrait layout (default) */
