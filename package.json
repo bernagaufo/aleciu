@@ -11,9 +11,11 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-admob-sdk": "^0.17.0",
+        "cordova-admob-sdklibs": "^2.1.6",
         "cordova-android": "^7.0.0",
         "cordova-android-play-services-gradle-release": "^1.4.2",
         "cordova-plugin-admob-free": "^0.17.1",
+        "cordova-plugin-admob-simple": "^3.3.8",
         "cordova-plugin-geolocation": "^4.0.1",
         "cordova-plugin-googlemaps": "^2.3.3",
         "cordova-plugin-network-information": "^2.0.1",

@@ -11,6 +11,7 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
         document.addEventListener("backbutton", onBackKeyDown, false);
+        initAd();
     },
 
     // Update DOM on a Received Event
@@ -50,7 +51,46 @@ function onError(error) {
 }
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+// funcion AdMob
+function initAd(){
+        if ( window.plugins && window.plugins.AdMob ) {
+            var ad_units = {
+                android : {
+                    banner: 'ca-app-pub-0211823635398974/8309002577',       //PUT ADMOB ADCODE HERE
+                    interstitial: 'ca-app-pub-0211823635398974/7783943294'  //PUT ADMOB ADCODE HERE
+                }
+            };
+            var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android;
+ 
+            window.plugins.AdMob.setOptions( {
+                publisherId: admobid.banner,
+                interstitialAdId: admobid.interstitial,
+                adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,  //use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD
+                bannerAtTop: false, // set to true, to put banner at top
+                overlap: true, // banner will overlap webview 
+                offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+                isTesting: false, // receiving test ad
+                autoShow: false // auto show interstitial ad when loaded
+            });
+ 
+            registerAdEvents();
+            window.plugins.AdMob.createInterstitialView();  //get the interstitials ready to be shown
+            window.plugins.AdMob.requestInterstitialAd();
+ 
+        } else {
+            //alert( 'admob plugin not ready' );
+        }
+};
+
+function showBannerFunc(){
+    window.plugins.AdMob.createBannerView();
+}
+//display the interstitial
+function showInterstitialFunc(){
+    window.plugins.AdMob.showInterstitialAd();
+}
+
 app.initialize();
 
-document.getElementById('version').innerHTML = 'Versión 1.7.1';
+document.getElementById('version').innerHTML = 'Versión 1.7';
 
