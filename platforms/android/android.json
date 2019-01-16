@@ -95,7 +95,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.cupertino.cordova.plugin.AdMob\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
               "count": 1
             }
           ]
@@ -113,18 +113,34 @@
               "count": 1
             },
             {
-              "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\" android:name=\"com.google.android.gms.ads.AdActivity\" android:theme=\"@android:style/Theme.Translucent\" />",
+              "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.PushHandlerActivity\" android:permission=\"${applicationId}.permission.PushHandlerActivity\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.adobe.phonegap.push.BackgroundActionButtonHandler\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.adobe.phonegap.push.PushDismissedHandler\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"com.adobe.phonegap.push.FCMService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"com.adobe.phonegap.push.PushInstanceIDListenerService\"><intent-filter><action android:name=\"com.google.firebase.INSTANCE_ID_EVENT\" /></intent-filter></service>",
               "count": 1
             }
           ],
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
@@ -145,6 +161,14 @@
             {
               "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
               "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+              "count": 1
             }
           ],
           "/*": [
@@ -158,14 +182,6 @@
             },
             {
               "xml": "<uses-feature android:name=\"android.hardware.location.gps\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
               "count": 1
             }
           ]
@@ -189,14 +205,8 @@
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.alertasciudadanas.mx"
     },
-    "cordova-admob-sdk": {
-      "PLAY_SERVICES_VERSION": "15.0.1",
-      "PACKAGE_NAME": "com.alertasciudadanas.mx"
-    },
-    "cordova-admob-sdklibs": {
-      "PACKAGE_NAME": "com.alertasciudadanas.mx"
-    },
-    "cordova-plugin-admob-simple": {
+    "phonegap-plugin-push": {
+      "FCM_VERSION": "11.6.2",
       "PACKAGE_NAME": "com.alertasciudadanas.mx"
     }
   },
@@ -437,11 +447,11 @@
       ]
     },
     {
-      "id": "cordova-plugin-admob-simple.AdMob",
-      "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
-      "pluginId": "cordova-plugin-admob-simple",
+      "id": "phonegap-plugin-push.PushNotification",
+      "file": "plugins/phonegap-plugin-push/www/push.js",
+      "pluginId": "phonegap-plugin-push",
       "clobbers": [
-        "window.plugins.AdMob"
+        "PushNotification"
       ]
     }
   ],
@@ -450,8 +460,6 @@
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-geolocation": "2.4.3",
     "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-admob-sdk": "0.13.1",
-    "cordova-admob-sdklibs": "2.1.6",
-    "cordova-plugin-admob-simple": "3.3.8"
+    "phonegap-plugin-push": "2.1.3"
   }
 }

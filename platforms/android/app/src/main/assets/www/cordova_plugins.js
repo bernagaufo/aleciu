@@ -235,11 +235,11 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-admob-simple.AdMob",
-    "file": "plugins/cordova-plugin-admob-simple/www/AdMob.js",
-    "pluginId": "cordova-plugin-admob-simple",
+    "id": "phonegap-plugin-push.PushNotification",
+    "file": "plugins/phonegap-plugin-push/www/push.js",
+    "pluginId": "phonegap-plugin-push",
     "clobbers": [
-      "window.plugins.AdMob"
+      "PushNotification"
     ]
   }
 ];
@@ -250,9 +250,7 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-geolocation": "2.4.3",
   "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-admob-sdk": "0.13.1",
-  "cordova-admob-sdklibs": "2.1.6",
-  "cordova-plugin-admob-simple": "3.3.8"
+  "phonegap-plugin-push": "2.1.3"
 };
 // BOTTOM OF METADATA
 });
