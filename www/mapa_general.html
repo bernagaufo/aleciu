@@ -88,19 +88,10 @@
           $(document).ready(function(){
             $('.collapsible').collapsible();
           });
-        var admobid = {
-            banner: 'ca-app-pub-0211823635398974/8309002577',
-            interstitial: 'ca-app-pub-0211823635398974/7783943294'
-        };
-        admob.banner.config({
-                id: admobid.banner,
-                isTesting: false,
-                autoShow: true,
-                size: FLUID,
-                bannerAtTop: false,
-            });
-        admob.banner.prepare();
-        admob.banner.show();
+        // Create banner
+        admob.banner.prepare()
+        // Show the banner
+        admob.banner.show()
         </script>
     </body>
 </html>
