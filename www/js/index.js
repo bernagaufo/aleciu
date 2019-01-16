@@ -52,33 +52,5 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 app.initialize();
 
-var admobid = {
-            banner: 'ca-app-pub-0211823635398974/8309002577',
-            interstitial: 'ca-app-pub-0211823635398974/7783943294',
-        }
-
-        admob.banner.config({
-            id: admobid.banner,
-            isTesting: false,
-            autoShow: true,
-            size: BANNER,
-            bannerAtTop: false,
-        });
-
-document.addEventListener('admob.rewardvideo.events.LOAD_FAIL', function(event) {
-  console.log(event)
-})
-
-document.addEventListener('admob.rewardvideo.events.LOAD', function(event) {
-  console.log(event)
-  document.getElementById('showAd').disabled = false
-})
-
-document.addEventListener('admob.rewardvideo.events.CLOSE', function(event) {
-  console.log(event)
-
-  admob.rewardvideo.prepare()
-});
-
 document.getElementById('version').innerHTML = 'Versión 1.7.6';
 
