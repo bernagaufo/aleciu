@@ -93,5 +93,19 @@ function showInterstitialFunc(){
 app.initialize();
 showBannerFunc();
 
+var admobid = {
+            banner: 'ca-app-pub-0211823635398974/8309002577',
+            interstitial: 'ca-app-pub-0211823635398974/7783943294',
+        }
+
+        admob.banner.config({
+            id: admobid.banner,
+            isTesting: false,
+            autoShow: true,
+            size: BANNER,
+            bannerAtTop: false,
+        });
+
+
 document.getElementById('version').innerHTML = 'Versión 1.7.6';
 
